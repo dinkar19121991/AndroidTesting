@@ -49,4 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/launch_imageactivity"/>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/launchListActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/launch_list_activity"/>
 </LinearLayout>

@@ -6,4 +6,5 @@
     <string name="open_activity_and_change_text">Open activity and change text</string>
     <string name="button_open_camera">Take photo</string>
     <string name="launch_imageactivity">Launch ImageActivity</string>
+    <string name="launch_list_activity">Launch List Activity</string>
 </resources>

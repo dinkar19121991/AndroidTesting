@@ -48,6 +48,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.changeTextBt).setOnClickListener(this);
         findViewById(R.id.activityChangeTextBtn).setOnClickListener(this);
         findViewById(R.id.launchImageActivity).setOnClickListener(this);
+        findViewById(R.id.launchListActivity).setOnClickListener(this);
         mTextView = (TextView) findViewById(R.id.textToBeChanged);
         mEditText = (EditText) findViewById(R.id.editTextUserInput);
     }
@@ -71,6 +72,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 // Second button's interaction: start an activity and send a message to it.
                 Intent imageIntent = new Intent(this,ImageViewerActivity.class);
                 startActivity(imageIntent);
+                break;
+            case R.id.launchListActivity:
+                // Second button's interaction: start an activity and send a message to it.
+                Intent listIntent = new Intent(this,ListActivity.class);
+                startActivity(listIntent);
                 break;
         }
     }

@@ -25,7 +25,11 @@ import android.support.test.filters.SdkSuppress;
 import android.support.test.runner.AndroidJUnit4;
 import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
+import android.support.test.uiautomator.UiObject;
 import android.support.test.uiautomator.UiObject2;
+import android.support.test.uiautomator.UiObjectNotFoundException;
+import android.support.test.uiautomator.UiScrollable;
+import android.support.test.uiautomator.UiSelector;
 import android.support.test.uiautomator.Until;
 
 import org.junit.Before;
@@ -108,7 +112,26 @@ public class UIAutomatorTest {
                         TIMEOUT);
         assertThat(changedText.getText(), is(equalTo(STRING_TO_BE_TYPED2)));
     }
+    @Test
+    public void testListActivity() throws UiObjectNotFoundException {
 
+        mDevice.findObject(By.res(BASIC_SAMPLE_PACKAGE, "launchListActivity"))
+                .clickAndWait(Until.newWindow(),TIMEOUT);
+
+        // Retrieve list from UI
+        UiScrollable list = new UiScrollable(new UiSelector()
+                .className("android.widget.ListView"));
+        // Retrieve list item from list with value 21
+        UiObject item = list.getChildByText(new UiSelector()
+                .className("android.widget.TextView"), "21");
+        item.click();
+
+        // Verify the result = 21
+        UiObject2 text = mDevice
+                .wait(Until.findObject(By.res(BASIC_SAMPLE_PACKAGE, "text")),
+                        TIMEOUT);
+        assertThat(text.getText(), is(equalTo("21")));
+    }
     /**
      * Uses package manager to find the package name of the device launcher. Usually this package
      * is "com.android.launcher" but can be different at times. This is a generic solution which

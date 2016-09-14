@@ -18,5 +18,6 @@
         </activity>
         <activity android:name="com.dinkark.androidtesting.espresso.basic.ShowTextActivity"/>
         <activity android:name="com.dinkark.androidtesting.espresso.intent.ImageViewerActivity"/>
+        <activity android:name="com.dinkark.androidtesting.espresso.basic.ListActivity"/>
     </application>
 </manifest>
