@@ -47,7 +47,7 @@ public class UIAutomatorTest {
     private static final String BASIC_SAMPLE_PACKAGE
             = "com.dinkark.androidtesting";
 
-    private static final int LAUNCH_TIMEOUT = 5000;
+    private static final int TIMEOUT = 10000;
 
     private static final String STRING_TO_BE_TYPED = "UiAutomator";
     private static final String STRING_TO_BE_TYPED2 = "UiAutomator is awesome";
@@ -65,7 +65,7 @@ public class UIAutomatorTest {
         // Wait for launcher
         final String launcherPackage = getLauncherPackageName();
         assertThat(launcherPackage, notNullValue());
-        mDevice.wait(Until.hasObject(By.pkg(launcherPackage).depth(0)), LAUNCH_TIMEOUT);
+        mDevice.wait(Until.hasObject(By.pkg(launcherPackage).depth(0)), TIMEOUT);
 
         // Launch the blueprint app
         Context context = InstrumentationRegistry.getContext();
@@ -75,13 +75,9 @@ public class UIAutomatorTest {
         context.startActivity(intent);
 
         // Wait for the app to appear
-        mDevice.wait(Until.hasObject(By.pkg(BASIC_SAMPLE_PACKAGE).depth(0)), LAUNCH_TIMEOUT);
+        mDevice.wait(Until.hasObject(By.pkg(BASIC_SAMPLE_PACKAGE).depth(0)), TIMEOUT);
     }
 
-    @Test
-    public void checkPreconditions() {
-        assertThat(mDevice, notNullValue());
-    }
 
     @Test
     public void testChangeText_sameActivity() {
@@ -94,7 +90,7 @@ public class UIAutomatorTest {
         // Verify the test is displayed in the Ui
         UiObject2 changedText = mDevice
                 .wait(Until.findObject(By.res(BASIC_SAMPLE_PACKAGE, "textToBeChanged")),
-                        500 /* wait 500ms */);
+                        TIMEOUT);
         assertThat(changedText.getText(), is(equalTo(STRING_TO_BE_TYPED)));
     }
 
@@ -109,7 +105,7 @@ public class UIAutomatorTest {
         // Verify the test is displayed in the Ui
         UiObject2 changedText = mDevice
                 .wait(Until.findObject(By.res(BASIC_SAMPLE_PACKAGE, "show_text_view")),
-                        500 /* wait 500ms */);
+                        TIMEOUT);
         assertThat(changedText.getText(), is(equalTo(STRING_TO_BE_TYPED2)));
     }
 
