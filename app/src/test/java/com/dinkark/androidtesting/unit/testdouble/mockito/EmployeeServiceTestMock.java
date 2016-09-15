@@ -1,4 +1,9 @@
-package com.dinkark.androidtesting.unit.testdouble;
+package com.dinkark.androidtesting.unit.testdouble.mockito;
+
+import com.dinkark.androidtesting.unit.testdouble.Customer;
+import com.dinkark.androidtesting.unit.testdouble.Employee;
+import com.dinkark.androidtesting.unit.testdouble.EmployeeDAO;
+import com.dinkark.androidtesting.unit.testdouble.EmployeeService;
 
 import org.junit.After;
 import org.junit.Before;
@@ -7,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static junit.framework.Assert.assertNull;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
@@ -20,25 +24,25 @@ public class EmployeeServiceTestMock {
     @Mock
     Employee employeeDummy;
     @Mock
-    EmployeeDAO employeeDAODummy;
+    EmployeeDAO employeeDAOMock;
     @Mock
     Customer customerDummy;
     @Before
     public void setup(){
-        employeeService = new EmployeeService(employeeDummy, employeeDAODummy);
+        employeeService = new EmployeeService(employeeDummy, employeeDAOMock);
     }
     @Test
     public void checkCreateCustomer(){
 
          employeeService.createCustomer(customerDummy);
-        verify(employeeDAODummy).saveCustomer(customerDummy);
-        verify(employeeDAODummy,never()).isAuthorizedEmployee(employeeDummy);
+        verify(employeeDAOMock).saveCustomer(customerDummy);
+        verify(employeeDAOMock,never()).isAuthorizedEmployee(employeeDummy);
     }
 
     @After
     public void cleanup(){
         employeeService=null;
-        assertNull(employeeService);
+
     }
 
 }

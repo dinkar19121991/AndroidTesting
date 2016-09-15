@@ -1,4 +1,9 @@
-package com.dinkark.androidtesting.unit.testdouble;
+package com.dinkark.androidtesting.unit.testdouble.mockito;
+
+import com.dinkark.androidtesting.unit.testdouble.Customer;
+import com.dinkark.androidtesting.unit.testdouble.Employee;
+import com.dinkark.androidtesting.unit.testdouble.EmployeeDAO;
+import com.dinkark.androidtesting.unit.testdouble.EmployeeService;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,7 +13,6 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -39,8 +43,7 @@ public class EmployeeServiceTestDummy {
     public void cleanup(){
         employeeService=null;
         customer=null;
-        assertNull(employeeService);
-        assertNull(customer);
+
     }
 
 }

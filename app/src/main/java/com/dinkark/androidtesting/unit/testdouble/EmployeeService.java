@@ -11,23 +11,26 @@ public class EmployeeService {
         this.employee = employee;
         this.employeeDAO = employeeDAO;
     }
-    public void makeCustomerPremium(Customer customer){
-        if(employee.isAdmin()){
+
+    public void makeCustomerPremium(Customer customer) {
+        if (employeeDAO.isEmployeeAdmin(employee)) {
             customer.setPremium(true);
         }
+    }
+
+    public void makeCustomerLocal(Customer customer) {
+
+        customer.setLocal(true);
+
 
     }
-    public void makeCustomerLocal(Customer customer){
 
-            customer.setLocal(true);
-
-
-    }
-    public void createCustomer(Customer customer){
-      employeeDAO.saveCustomer(customer);
+    public void createCustomer(Customer customer) {
+        employeeDAO.saveCustomer(customer);
 
     }
-    public boolean authorizedEmployee(Employee employee){
+
+    public boolean authorizedEmployee(Employee employee) {
         return employeeDAO.isAuthorizedEmployee(employee);
     }
 }

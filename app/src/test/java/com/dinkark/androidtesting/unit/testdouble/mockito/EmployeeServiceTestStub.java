@@ -1,4 +1,9 @@
-package com.dinkark.androidtesting.unit.testdouble;
+package com.dinkark.androidtesting.unit.testdouble.mockito;
+
+import com.dinkark.androidtesting.unit.testdouble.Customer;
+import com.dinkark.androidtesting.unit.testdouble.Employee;
+import com.dinkark.androidtesting.unit.testdouble.EmployeeDAO;
+import com.dinkark.androidtesting.unit.testdouble.EmployeeService;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,7 +13,6 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
@@ -20,18 +24,18 @@ public class EmployeeServiceTestStub {
     Customer customer;
     EmployeeService employeeService;
     @Mock
-    Employee employeeStub;
+    Employee employeeDummy;
     @Mock
-    EmployeeDAO employeeDAODummy;
+    EmployeeDAO employeeDAOStub;
     @Before
     public void setup(){
-        employeeService = new EmployeeService(employeeStub, employeeDAODummy);
+        employeeService = new EmployeeService(employeeDummy, employeeDAOStub);
         customer= new Customer();
     }
 
     @Test
     public void checkIfCustomerPremium(){
-        when(employeeStub.isAdmin()).thenReturn(true);
+        when(employeeDAOStub.isEmployeeAdmin(employeeDummy)).thenReturn(true);
         assertFalse(customer.isPremium());
         employeeService.makeCustomerPremium(customer);
         assertTrue(customer.isPremium());
@@ -40,7 +44,5 @@ public class EmployeeServiceTestStub {
     public void cleanup(){
         employeeService=null;
         customer=null;
-        assertNull(employeeService);
-        assertNull(customer);
     }
 }
