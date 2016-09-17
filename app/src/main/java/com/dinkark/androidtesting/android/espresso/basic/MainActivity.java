@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.espresso.basic;
+package com.dinkark.androidtesting.android.espresso.basic;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -24,7 +24,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.dinkark.androidtesting.R;
-import com.dinkark.androidtesting.espresso.intent.ImageViewerActivity;
+import com.dinkark.androidtesting.android.espresso.intent.ImageViewerActivity;
 
 /**
  * An {@link Activity} that gets a text string from the user and displays it back when the user

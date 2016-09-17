@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.unit.espresso.intent;
+package com.dinkark.androidtesting.android.espresso.intent;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -26,8 +26,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.dinkark.androidtesting.R;
-import com.dinkark.androidtesting.espresso.basic.MainActivity;
-import com.dinkark.androidtesting.espresso.intent.ImageViewerActivity;
+import com.dinkark.androidtesting.android.espresso.basic.MainActivity;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -42,7 +41,7 @@ import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.Intents.intending;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static com.dinkark.androidtesting.unit.espresso.intent.ImageViewHasDrawableMatcher.hasDrawable;
+import static com.dinkark.androidtesting.android.espresso.intent.ImageViewHasDrawableMatcher.hasDrawable;
 import static org.hamcrest.Matchers.not;
 
 

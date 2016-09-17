@@ -1,12 +1,10 @@
-package com.dinkark.androidtesting.unit.espresso.basic;
+package com.dinkark.androidtesting.android.espresso.basic;
 
 import android.support.test.espresso.matcher.BoundedMatcher;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.dinkark.androidtesting.R;
-import com.dinkark.androidtesting.espresso.basic.ListActivity;
-import com.dinkark.androidtesting.espresso.basic.MainActivity;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;

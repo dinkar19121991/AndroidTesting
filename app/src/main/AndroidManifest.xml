@@ -9,15 +9,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.dinkark.androidtesting.espresso.basic.MainActivity"
+            android:name="com.dinkark.androidtesting.android.espresso.basic.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dinkark.androidtesting.espresso.basic.ShowTextActivity"/>
-        <activity android:name="com.dinkark.androidtesting.espresso.intent.ImageViewerActivity"/>
-        <activity android:name="com.dinkark.androidtesting.espresso.basic.ListActivity"/>
+        <activity android:name="com.dinkark.androidtesting.android.espresso.basic.ShowTextActivity"/>
+        <activity android:name="com.dinkark.androidtesting.android.espresso.intent.ImageViewerActivity"/>
+        <activity android:name="com.dinkark.androidtesting.android.espresso.basic.ListActivity"/>
     </application>
 </manifest>

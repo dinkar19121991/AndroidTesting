@@ -1,4 +1,4 @@
-package com.dinkark.androidtesting.espresso.basic;
+package com.dinkark.androidtesting.android.espresso.basic;
 
 import android.graphics.Color;
 import android.os.Bundle;

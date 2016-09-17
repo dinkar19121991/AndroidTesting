@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.unit.instrumented;
+package com.dinkark.androidtesting.android.instrumented;
 
 import android.os.Parcel;
 import android.support.test.runner.AndroidJUnit4;

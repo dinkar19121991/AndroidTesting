@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.espresso.basic;
+package com.dinkark.androidtesting.android.espresso.basic;
 
 import android.app.Activity;
 import android.content.Context;

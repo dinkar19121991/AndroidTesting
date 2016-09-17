@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.unit.espresso.intent;
+package com.dinkark.androidtesting.android.espresso.intent;
 
 import android.support.test.espresso.matcher.BoundedMatcher;
 import android.view.View;

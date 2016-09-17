@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.dinkark.androidtesting.unit.instrumented;
+package com.dinkark.androidtesting.android.instrumented;
 
 import android.os.Parcel;
 import android.os.Parcelable;

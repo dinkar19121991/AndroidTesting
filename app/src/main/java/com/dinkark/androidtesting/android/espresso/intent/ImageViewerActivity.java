@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.espresso.intent;
+package com.dinkark.androidtesting.android.espresso.intent;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.unit.espresso.basic;
+package com.dinkark.androidtesting.android.espresso.basic;
 
 import android.app.Activity;
 import android.support.test.espresso.action.ViewActions;
@@ -22,10 +22,8 @@ import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.suitebuilder.annotation.LargeTest;
 
 import com.dinkark.androidtesting.R;
-import com.dinkark.androidtesting.espresso.basic.MainActivity;
 
 import org.junit.Before;
 import org.junit.Rule;

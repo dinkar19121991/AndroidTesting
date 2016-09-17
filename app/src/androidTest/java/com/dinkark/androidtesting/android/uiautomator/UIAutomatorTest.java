@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dinkark.androidtesting.unit.uiautomator;
+package com.dinkark.androidtesting.android.uiautomator;
 
 import android.content.Context;
 import android.content.Intent;

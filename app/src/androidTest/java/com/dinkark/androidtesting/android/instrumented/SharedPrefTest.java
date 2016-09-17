@@ -1,19 +1,12 @@
-package com.dinkark.androidtesting.unit.instrumented;
+package com.dinkark.androidtesting.android.instrumented;
 
-import android.app.Instrumentation;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.AndroidTestCase;
-import android.test.InstrumentationTestCase;
 
-import com.dinkark.androidtesting.espresso.basic.MainActivity;
+import com.dinkark.androidtesting.android.espresso.basic.MainActivity;
 
-import junit.framework.Assert;
-
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Rule;
